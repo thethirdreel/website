@@ -1,0 +1,349 @@
+{
+  "items": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ghs71ry1f8qc"
+          }
+        },
+        "id": "1Vx7CroSoI4qAKM4aiOi2O",
+        "type": "Entry",
+        "createdAt": "2016-10-13T22:32:15.364Z",
+        "updatedAt": "2016-10-28T23:37:58.054Z",
+        "revision": 5,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "podcast"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "The Third Reel"
+        },
+        "slug": {
+          "en-US": "the-third-reel"
+        },
+        "subtitle": {
+          "en-US": "cinema talk for aristocrats"
+        },
+        "description": {
+          "en-US": "Join Frank, Jim & Mark as they take a deep dive into some of the greatest movies ever made."
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3cF5QM2GmcO6qyAKumqw0y"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ghs71ry1f8qc"
+          }
+        },
+        "id": "3cF5QM2GmcO6qyAKumqw0y",
+        "type": "Asset",
+        "createdAt": "2016-10-13T22:27:41.619Z",
+        "updatedAt": "2016-10-13T22:27:41.619Z",
+        "revision": 1
+      },
+      "fields": {
+        "title": {
+          "en-US": "generic-podcast-thumbnail"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.contentful.com/ghs71ry1f8qc/3cF5QM2GmcO6qyAKumqw0y/555ce9e9a125b01c8eb7b86144074240/generic-podcast-thumbnail.jpg",
+            "details": {
+              "size": 214476,
+              "image": {
+                "width": 3000,
+                "height": 3000
+              }
+            },
+            "fileName": "generic-podcast-thumbnail.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ghs71ry1f8qc"
+          }
+        },
+        "id": "ZYuVrUuWmiE0mg66ECqe8",
+        "type": "Asset",
+        "createdAt": "2016-10-19T19:14:43.187Z",
+        "updatedAt": "2016-10-19T19:14:43.187Z",
+        "revision": 1
+      },
+      "fields": {
+        "title": {
+          "en-US": "generic-podcast-theme"
+        },
+        "file": {
+          "en-US": {
+            "url": "//assets.contentful.com/ghs71ry1f8qc/ZYuVrUuWmiE0mg66ECqe8/78c75267e2b1c3d595d940d929c19015/generic-podcast-theme.mp3",
+            "details": {
+              "size": 966817
+            },
+            "fileName": "generic-podcast-theme.mp3",
+            "contentType": "audio/mpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ghs71ry1f8qc"
+          }
+        },
+        "id": "3tuiYihpLamMGgGKC4O8qU",
+        "type": "Entry",
+        "createdAt": "2016-10-19T19:47:21.313Z",
+        "updatedAt": "2016-10-28T18:28:22.285Z",
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "episode"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Episode-3"
+        },
+        "slug": {
+          "en-US": "episode-3"
+        },
+        "subtitle": {
+          "en-US": "number one"
+        },
+        "description": {
+          "en-US": "Letterpress enamel pin wolf, flannel sriracha portland pork belly forage jianbing tumblr. Williamsburg man braid viral, raw denim DIY kale chips waistcoat vaporware gluten-free 3 wolf moon everyday carry occupy tattooed shoreditch. "
+        },
+        "publishDate": {
+          "en-US": "2016-10-01T00:00-06:00"
+        },
+        "podcast": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1Vx7CroSoI4qAKM4aiOi2O"
+            }
+          }
+        },
+        "asset": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "ZYuVrUuWmiE0mg66ECqe8"
+            }
+          }
+        },
+        "volume": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4lLV5CPss028GGIUO0yMA0"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ghs71ry1f8qc"
+          }
+        },
+        "id": "22NCeFvtJyA0OQWmEgYwCc",
+        "type": "Entry",
+        "createdAt": "2016-10-19T19:47:10.016Z",
+        "updatedAt": "2016-10-28T18:28:12.386Z",
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "episode"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Episode-2"
+        },
+        "slug": {
+          "en-US": "episode-2"
+        },
+        "subtitle": {
+          "en-US": "number one"
+        },
+        "description": {
+          "en-US": "Seitan lomo single-origin coffee, literally kogi microdosing occupy post-ironic listicle retro crucifix messenger bag chambray glossier subway tile. Helvetica vaporware vape humblebrag before they sold out."
+        },
+        "publishDate": {
+          "en-US": "2016-10-01T00:00-06:00"
+        },
+        "podcast": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1Vx7CroSoI4qAKM4aiOi2O"
+            }
+          }
+        },
+        "asset": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "ZYuVrUuWmiE0mg66ECqe8"
+            }
+          }
+        },
+        "volume": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4lLV5CPss028GGIUO0yMA0"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ghs71ry1f8qc"
+          }
+        },
+        "id": "5jcnJXfWucoO2CEYMcyy6Y",
+        "type": "Entry",
+        "createdAt": "2016-10-19T19:46:18.470Z",
+        "updatedAt": "2016-10-28T18:28:04.156Z",
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "episode"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Episode-1"
+        },
+        "slug": {
+          "en-US": "episode-1"
+        },
+        "subtitle": {
+          "en-US": "number one"
+        },
+        "description": {
+          "en-US": "Mustache aesthetic snackwave trust fund messenger bag listicle yr, brunch blog. Health goth williamsburg flannel, plaid brunch chambray kale chips. Pour-over VHS organic actually normcore. "
+        },
+        "publishDate": {
+          "en-US": "2016-10-01T00:00-06:00"
+        },
+        "podcast": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1Vx7CroSoI4qAKM4aiOi2O"
+            }
+          }
+        },
+        "asset": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "ZYuVrUuWmiE0mg66ECqe8"
+            }
+          }
+        },
+        "volume": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4lLV5CPss028GGIUO0yMA0"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ghs71ry1f8qc"
+          }
+        },
+        "id": "4lLV5CPss028GGIUO0yMA0",
+        "type": "Entry",
+        "createdAt": "2016-10-28T18:27:51.935Z",
+        "updatedAt": "2016-10-28T18:27:51.935Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "volume"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Merchant Madness"
+        },
+        "slug": {
+          "en-US": "merchant-madness"
+        }
+      }
+    }
+  ],
+  "nextSyncToken": "w5ZGw6JFwqZmVcKsE8Kow4grw45QdyZOBMOZwpcsBMKaJcKgw4LDsmwWwrViTsKmw40Ew4VgdX_DuX5ew45UBsKPw5llecOCGCXCm8KZwpHCqlDDvx5sT8KZw5zChcKTZ1jDo8OtIw7DtcKwVGzDtGgHX8Of"
+}
