@@ -79,7 +79,7 @@ body.is-loading *, body.is-loading *:before, body.is-loading *:after {
 /* typography */
 body, input, select, textarea {
 	color: rgba(255, 255, 255, 0.75);
-	font-family: "Proxima Nova", sans-serif;
+	font-family: "proxima-nova", sans-serif;
 	font-size: 14pt;
 	font-weight: 300;
 	line-height: 1.65;
