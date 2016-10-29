@@ -1,7 +1,7 @@
 {
-  "name": "generator",
-  "description": "Generator",
-  "author": "Organization 618",
+  "name": "website",
+  "description": "website",
+  "author": "The Third Reel",
   "version": "1.0.0",
   "private": true,
   "scripts": {
