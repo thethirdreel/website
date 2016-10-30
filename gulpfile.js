@@ -60,7 +60,16 @@ gulp.task('db:sync', function(cb) {
 gulp.task('db:load', function() {
   // queries
   database['podcast'] = db.get_all(language, 'podcast')[0];
-  database['episodes'] = db.get_all(language, 'episode');
+  let volumes = db.get_all(language, 'volume');
+  let episodes = db.get_all(language, 'episode');
+
+  // sort - volumes
+  volumes = _.orderBy(volumes, ['createdAt'], ['desc']);
+  database['volumes'] = volumes;
+
+  // sort - episodes
+  episodes = _.orderBy(episodes, ['volume.createdAt', 'createdAt'], ['desc', 'desc']);
+  database['episodes'] = episodes;
 
   // transform - podcast
   database['podcast']['pubDate'] = database['podcast'].createdAt.toUTCString();
@@ -83,8 +92,12 @@ gulp.task('clean:js', function() {
 });
 
 gulp.task('build:js', ['clean:js'], function() {
-  return gulp.src('./src/js/*')
-    .pipe(jsminify({ ext: { src:'-debug.js', min:'.js' }, ignoreFiles: ['*min.js'] } ))
+  gulp.src('./src/js/*.min.js')
+    .pipe(gulp.dest('./public/js/'))
+    .pipe(browser.reload( { stream: true} ));
+  gulp.src('./src/js/main.js')
+    .pipe(jsminify({ ext: { src:'-debug.js', min:'.js' } } ))
+    // .pipe(jsminify({ ext: { src:'-debug.js', min:'.js' }, ignoreFiles: ['*min.js'] } ))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('./public/js/'))
     .pipe(browser.reload( { stream: true} ));
@@ -96,17 +109,57 @@ gulp.task('build:js', ['clean:js'], function() {
 
 gulp.task('clean:views', function() {
   return del([
+    './public/**/*.rss',
     './public/**/index.html',
-    './public/**/*.rss'
+    './public/volumes/*',
+    './public/episodes/*'
   ]);
 });
 
 gulp.task('build:views', ['clean:views'], function() {
   var data = {
     podcast: database.podcast,
-    episodes: database.episodes
+    volumes: database.volumes,
+    episodes: database.episodes,
   };
-  // landing page
+
+  // volume landing pages
+  _.each(database.volumes, (volume) => {
+    console.log(volume.number, volume.slug);
+
+    let episodes =  _.filter(database.episodes, function (episode) {
+      if (episode.volume.number === volume.number) {
+        return episode;
+      }
+    });
+
+    _.each(episodes, (episode) => {
+      console.log('\t', episode.volume.number, episode.slug);
+    });
+
+    let data = {
+      podcast: database.podcast,
+      volume: volume,
+      episodes: episodes
+    }
+    gulp
+      .src('./src/templates/volume.hbs')
+      .pipe(hb()
+        .partials('./src/templates/layouts/main.hbs')
+        .helpers(layouts)
+        .data(data)
+      )
+      .pipe(rename(`${volume.slug}.html`))
+      .pipe(gulp.dest('./public/volumes'))
+      .pipe(browser.reload( { stream: true} ));
+  });
+
+  // episode landing pages
+  _.each(database.episodes, (episode) => {
+    console.log(episode.volume.number, episode.number, episode.slug);
+  });
+
+  // index
   gulp
     .src('./src/templates/index.hbs')
     .pipe(hb()
@@ -115,6 +168,7 @@ gulp.task('build:views', ['clean:views'], function() {
     .pipe(rename('index.html'))
     .pipe(gulp.dest('./public/'))
     .pipe(browser.reload( { stream: true} ));
+
   // rss feed
   gulp
     .src('./src/templates/feed.hbs')

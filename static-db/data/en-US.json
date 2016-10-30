@@ -305,8 +305,8 @@
         "id": "4lLV5CPss028GGIUO0yMA0",
         "type": "Entry",
         "createdAt": "2016-10-28T18:27:51.935Z",
-        "updatedAt": "2016-10-30T21:40:51.666Z",
-        "revision": 2,
+        "updatedAt": "2016-10-30T23:46:08.604Z",
+        "revision": 3,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -324,6 +324,9 @@
         },
         "slug": {
           "en-US": "merchant-madness"
+        },
+        "description": {
+          "en-US": "Those crazy Hebrews are up to their no good tricks."
         }
       }
     },
@@ -361,7 +364,111 @@
           }
         }
       }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ghs71ry1f8qc"
+          }
+        },
+        "id": "mbBxiTAZWKI6EeamsOO2E",
+        "type": "Entry",
+        "createdAt": "2016-10-30T22:44:22.957Z",
+        "updatedAt": "2016-10-30T22:44:55.593Z",
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "episode"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "The Ninth Gate"
+        },
+        "slug": {
+          "en-US": "the-ninth-gate"
+        },
+        "subtitle": {
+          "en-US": "the ninth gate"
+        },
+        "description": {
+          "en-US": "Discrepancies\nTradition vs Counter-Tradition\nWho is Polanski?\nOdds & Ends"
+        },
+        "podcast": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1Vx7CroSoI4qAKM4aiOi2O"
+            }
+          }
+        },
+        "asset": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "ZYuVrUuWmiE0mg66ECqe8"
+            }
+          }
+        },
+        "volume": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4bvG7ZVZAcYwCkWmKE8gka"
+            }
+          }
+        },
+        "number": {
+          "en-US": 1
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ghs71ry1f8qc"
+          }
+        },
+        "id": "4bvG7ZVZAcYwCkWmKE8gka",
+        "type": "Entry",
+        "createdAt": "2016-10-30T22:42:19.085Z",
+        "updatedAt": "2016-10-30T22:42:19.085Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "volume"
+          }
+        }
+      },
+      "fields": {
+        "number": {
+          "en-US": 0
+        },
+        "title": {
+          "en-US": "The Lost Recordings"
+        },
+        "slug": {
+          "en-US": "the-lost-recordings"
+        },
+        "description": {
+          "en-US": "Everything we don't want to release to the public."
+        }
+      }
     }
   ],
-  "nextSyncToken": "w5ZGw6JFwqZmVcKsE8Kow4grw45QdyYiw5Y5w6_DmcORG8OLwph2GMKueQPDhcK7wo3DlMOaw4EewrrDqMKrw7DCi8Onw4LDlDZUXsOuw6ZfwprClBbCqcOIDn15bMKBGEUhw5nCuQtaw5p3HMKHwrrCh8OGcMO-UHsd"
+  "nextSyncToken": "w5ZGw6JFwqZmVcKsE8Kow4grw45QdyYywqbChXI1JQzCg8KGwrYnRcKPUjwFw74MSE_Cj3rDl8O_UUDDp8KFScO9BsKOQFFFE0h7wprCsMOAwpPCqsOcwr5rwpEVbnTDtMOOVMKRw5_DvcK4wqIew6bCk0HDvcKf"
 }

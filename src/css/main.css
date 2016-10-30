@@ -298,6 +298,10 @@ ul.icons li:last-child {
 #banner h2, h3 {
 	margin: 0;
 }
+#banner p {
+	font-size: 1.25em;
+	letter-spacing: .1em;
+}
 @media screen and (max-width: 980px) {
 	#banner h1 {
 		font-size: 3em;

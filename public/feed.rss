@@ -25,15 +25,21 @@
   <itunes:category text="Society &amp; Culture"/>
   <itunes:category text="Arts"/>
   <item>
-    <guid isPermaLink="false">22NCeFvtJyA0OQWmEgYwCc</guid>
-    <title><![CDATA[Merchant Madness]]>: <![CDATA[Network]]></title>
-    <description><![CDATA[Seitan lomo single-origin coffee, literally kogi microdosing occupy post-ironic listicle retro crucifix messenger bag chambray glossier subway tile. Helvetica vaporware vape humblebrag before they sold out.]]></description>
-    <pubDate>Wed, 19 Oct 2016 19:47:10 GMT</pubDate>
+    <guid isPermaLink="false">mbBxiTAZWKI6EeamsOO2E</guid>
+    <title><![CDATA[The Lost Recordings]]>: <![CDATA[The Ninth Gate]]></title>
+    <description><![CDATA[Discrepancies
+Tradition vs Counter-Tradition
+Who is Polanski?
+Odds & Ends]]></description>
+    <pubDate>Sun, 30 Oct 2016 22:44:22 GMT</pubDate>
     <enclosure type="audio/mpeg" url="https://assets.contentful.com/ghs71ry1f8qc/ZYuVrUuWmiE0mg66ECqe8/78c75267e2b1c3d595d940d929c19015/generic-podcast-theme.mp3"/>
     <itunes:author>thethirdreel</itunes:author>
     <itunes:explicit>yes</itunes:explicit>
-    <itunes:summary><![CDATA[Seitan lomo single-origin coffee, literally kogi microdosing occupy post-ironic listicle retro crucifix messenger bag chambray glossier subway tile. Helvetica vaporware vape humblebrag before they sold out.]]></itunes:summary>
-    <itunes:subtitle><![CDATA[episode2]]></itunes:subtitle>
+    <itunes:summary><![CDATA[Discrepancies
+Tradition vs Counter-Tradition
+Who is Polanski?
+Odds & Ends]]></itunes:summary>
+    <itunes:subtitle><![CDATA[the ninth gate]]></itunes:subtitle>
   </item>
   <item>
     <guid isPermaLink="false">3tuiYihpLamMGgGKC4O8qU</guid>
@@ -45,6 +51,17 @@
     <itunes:explicit>yes</itunes:explicit>
     <itunes:summary><![CDATA[Letterpress enamel pin wolf, flannel sriracha portland pork belly forage jianbing tumblr. Williamsburg man braid viral, raw denim DIY kale chips waistcoat vaporware gluten-free 3 wolf moon everyday carry occupy tattooed shoreditch. ]]></itunes:summary>
     <itunes:subtitle><![CDATA[episode 3]]></itunes:subtitle>
+  </item>
+  <item>
+    <guid isPermaLink="false">22NCeFvtJyA0OQWmEgYwCc</guid>
+    <title><![CDATA[Merchant Madness]]>: <![CDATA[Network]]></title>
+    <description><![CDATA[Seitan lomo single-origin coffee, literally kogi microdosing occupy post-ironic listicle retro crucifix messenger bag chambray glossier subway tile. Helvetica vaporware vape humblebrag before they sold out.]]></description>
+    <pubDate>Wed, 19 Oct 2016 19:47:10 GMT</pubDate>
+    <enclosure type="audio/mpeg" url="https://assets.contentful.com/ghs71ry1f8qc/ZYuVrUuWmiE0mg66ECqe8/78c75267e2b1c3d595d940d929c19015/generic-podcast-theme.mp3"/>
+    <itunes:author>thethirdreel</itunes:author>
+    <itunes:explicit>yes</itunes:explicit>
+    <itunes:summary><![CDATA[Seitan lomo single-origin coffee, literally kogi microdosing occupy post-ironic listicle retro crucifix messenger bag chambray glossier subway tile. Helvetica vaporware vape humblebrag before they sold out.]]></itunes:summary>
+    <itunes:subtitle><![CDATA[episode2]]></itunes:subtitle>
   </item>
   <item>
     <guid isPermaLink="false">5jcnJXfWucoO2CEYMcyy6Y</guid>

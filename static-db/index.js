@@ -26,7 +26,6 @@ Database.prototype.load = require('./lib/data.js')(db).load;
 Database.prototype.get_by_id = require('./lib/queries.js')(db).get_by_id;
 Database.prototype.get_all = require('./lib/queries.js')(db).get_all;
 Database.prototype.get_all_where = require('./lib/queries.js')(db).get_all_where;
-Database.prototype.get_published = require('./lib/queries.js')(db).get_published;
 
 // info & stats
 Database.prototype.languages = require('./lib/info.js')(db).languages;

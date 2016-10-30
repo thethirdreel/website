@@ -1,0 +1,31 @@
+{{#extend "main"}}
+{{#content "content"}}
+  <section id="banner">
+    <div class="inner">
+      <header>
+        <h1>{{{volume.title}}}</h1>
+        <h2>Volume {{{volume.number}}}</h2>
+        <p>{{{volume.description}}}</p>
+        <hr/>
+      </header>
+      <main>
+        <ol>
+        {{#each episodes}}
+          <li>{{slug}}</li>
+        {{/each}}
+        </ol>
+      </main>
+      <footer id="footer">
+        <div class="inner">
+          <ul class="icons">
+            <li><a href="{{podcast.twitter}}" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="{{podcast.facebook}}" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+            <li><a href="mailto:{{podcast.email}}?subject=hello" class="icon fa-envelope"><span class="label">Email</span></a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <div class="overlay"></div>
+  </section>
+{{/content}}
+{{/extend}}
