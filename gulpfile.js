@@ -62,16 +62,12 @@ gulp.task('db:load', function() {
   database['episodes'] = db.get_all(language, 'episode');
 
   // transform - podcast
-  let podcast_publish_date = database['podcast'].publishDate;
-  let podcast_pub_date = new Date(podcast_publish_date).toUTCString();
-  database['podcast']['pubDate'] = podcast_pub_date;
+  database['podcast']['pubDate'] = database['podcast'].createdAt.toUTCString();
 
   // transform - episodes
   _.each(database.episodes, (episode) => {
     episode['media'] = `https:${episode.asset.file.url}`;
-    let episode_publish_date = episode.publishDate;
-    let episode_pub_date = new Date(episode_publish_date).toUTCString();
-    episode['pubDate'] = episode_pub_date;
+    episode['pubDate'] = episode.createdAt.toUTCString();
   });
 });
 

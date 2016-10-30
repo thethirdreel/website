@@ -305,8 +305,8 @@
         "id": "4lLV5CPss028GGIUO0yMA0",
         "type": "Entry",
         "createdAt": "2016-10-28T18:27:51.935Z",
-        "updatedAt": "2016-10-28T18:27:51.935Z",
-        "revision": 1,
+        "updatedAt": "2016-10-30T21:40:51.666Z",
+        "revision": 2,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -316,6 +316,9 @@
         }
       },
       "fields": {
+        "number": {
+          "en-US": 1
+        },
         "title": {
           "en-US": "Merchant Madness"
         },
@@ -360,5 +363,5 @@
       }
     }
   ],
-  "nextSyncToken": "w5ZGw6JFwqZmVcKsE8Kow4grw45QdybDs8KRfUzDvETDl8KLe0k4P2dHMVk5w4DDgVNoX8OKw4Q4wpvChV3ClcORw4AXYHptKsO0GRHDuF_Dv8OVPMOqC8KgWMOqGsKNI8OOw7PClgnCll_DrEkleiPCnw"
+  "nextSyncToken": "w5ZGw6JFwqZmVcKsE8Kow4grw45QdyZpTgHCsG8fVRQvwqF0wq_DkHXDolfCrcOUw7xLU8O9HcOXQx52worDlsK3wonCusK0woTCtQ8bw4Y1YsKfDTgXw4VfaEjDh8Obwo5aw7vDrMKfw6vDqMOWB1TDj2TCnHU"
 }

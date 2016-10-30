@@ -190,7 +190,11 @@ module.exports = function(db) {
 
       // create a flattened object by removing the fields and sys nesting
       // add a id and contentType to the root of the object
-      return _.assign(fields, {id: item.sys.id, contentType: item.sys.type === 'Entry' ? item.sys.contentType.sys.id : 'asset', updatedAt: new Date(item.sys.updatedAt)});
+      return _.assign(fields, {
+        id: item.sys.id,
+        contentType: item.sys.type === 'Entry' ? item.sys.contentType.sys.id : 'asset', 
+        createdAt: new Date(item.sys.createdAt)
+      });
     }
 
     // load from the filesystem if not cached in memory
