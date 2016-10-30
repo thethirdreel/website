@@ -1,32 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
 <channel>
-  <atom:link href="http://cinemacaust.com/feed.rss" rel="self" type="application/rss+xml"/>
+  <atom:link href="https://thethirdreel.com/feed.rss" rel="self" type="application/rss+xml"/>
   <title><![CDATA[The Third Reel]]></title>
   <description><![CDATA[Join Frank, Jim & Mark as they take a deep dive into some of the greatest movies ever made.]]></description>
-  <pubDate></pubDate>
+  <pubDate>Sat, 01 Oct 2016 06:00:00 GMT</pubDate>
   <language>en</language>
-  <copyright>All rights reserved</copyright>
-  <link>http://thethirdreel.com</link>
+  <copyright>all rights reserved</copyright>
+  <link>https://thethirdreel.com</link>
   <image>
-    <url>https://images.contentful.com/ghs71ry1f8qc/3cF5QM2GmcO6qyAKumqw0y/555ce9e9a125b01c8eb7b86144074240/generic-podcast-thumbnail.jpg</url>
+    <url>https://images.contentful.com/ghs71ry1f8qc/6leGgphtPG8UIcWOOgSGGA/59a21a3844521f4753b28fb9cda76bc8/3rdreel-brand-logo.png</url>
     <title><![CDATA[The Third Reel]]></title>
-    <link>http://thethirdreel.com</link>
+    <link>https://thethirdreel.com</link>
   </image>
   <itunes:subtitle><![CDATA[cinema talk for aristocrats]]></itunes:subtitle>
   <itunes:owner>
     <itunes:name><![CDATA[The Third Reel]]></itunes:name>
-    <itunes:email>podcast@thethirdreel.com</itunes:email>
+    <itunes:email>director@thethirdreel.com</itunes:email>
   </itunes:owner>
   <itunes:author>thethirdreel</itunes:author>
   <itunes:explicit>yes</itunes:explicit>
-  <itunes:image href="https://images.contentful.com/ghs71ry1f8qc/3cF5QM2GmcO6qyAKumqw0y/555ce9e9a125b01c8eb7b86144074240/generic-podcast-thumbnail.jpg"/>
+  <itunes:image href="https://images.contentful.com/ghs71ry1f8qc/6leGgphtPG8UIcWOOgSGGA/59a21a3844521f4753b28fb9cda76bc8/3rdreel-brand-logo.png"/>
+  <itunes:category text="TV &amp; Film"/>
   <itunes:category text="Society &amp; Culture"/>
+  <itunes:category text="Arts"/>
   <item>
     <guid isPermaLink="false">5jcnJXfWucoO2CEYMcyy6Y</guid>
     <title><![CDATA[Episode-1]]></title>
     <description><![CDATA[Mustache aesthetic snackwave trust fund messenger bag listicle yr, brunch blog. Health goth williamsburg flannel, plaid brunch chambray kale chips. Pour-over VHS organic actually normcore. ]]></description>
-    <pubDate>2016-10-01T00:00-06:00</pubDate>
+    <pubDate>Sat, 01 Oct 2016 06:00:00 GMT</pubDate>
     <enclosure type="audio/mpeg" url="https://assets.contentful.com/ghs71ry1f8qc/ZYuVrUuWmiE0mg66ECqe8/78c75267e2b1c3d595d940d929c19015/generic-podcast-theme.mp3"/>
     <itunes:author>thethirdreel</itunes:author>
     <itunes:explicit>yes</itunes:explicit>
@@ -37,7 +39,7 @@
     <guid isPermaLink="false">22NCeFvtJyA0OQWmEgYwCc</guid>
     <title><![CDATA[Episode-2]]></title>
     <description><![CDATA[Seitan lomo single-origin coffee, literally kogi microdosing occupy post-ironic listicle retro crucifix messenger bag chambray glossier subway tile. Helvetica vaporware vape humblebrag before they sold out.]]></description>
-    <pubDate>2016-10-01T00:00-06:00</pubDate>
+    <pubDate>Sat, 01 Oct 2016 06:00:00 GMT</pubDate>
     <enclosure type="audio/mpeg" url="https://assets.contentful.com/ghs71ry1f8qc/ZYuVrUuWmiE0mg66ECqe8/78c75267e2b1c3d595d940d929c19015/generic-podcast-theme.mp3"/>
     <itunes:author>thethirdreel</itunes:author>
     <itunes:explicit>yes</itunes:explicit>
@@ -48,7 +50,7 @@
     <guid isPermaLink="false">3tuiYihpLamMGgGKC4O8qU</guid>
     <title><![CDATA[Episode-3]]></title>
     <description><![CDATA[Letterpress enamel pin wolf, flannel sriracha portland pork belly forage jianbing tumblr. Williamsburg man braid viral, raw denim DIY kale chips waistcoat vaporware gluten-free 3 wolf moon everyday carry occupy tattooed shoreditch. ]]></description>
-    <pubDate>2016-10-01T00:00-06:00</pubDate>
+    <pubDate>Sat, 01 Oct 2016 06:00:00 GMT</pubDate>
     <enclosure type="audio/mpeg" url="https://assets.contentful.com/ghs71ry1f8qc/ZYuVrUuWmiE0mg66ECqe8/78c75267e2b1c3d595d940d929c19015/generic-podcast-theme.mp3"/>
     <itunes:author>thethirdreel</itunes:author>
     <itunes:explicit>yes</itunes:explicit>

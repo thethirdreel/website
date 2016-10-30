@@ -55,21 +55,23 @@ gulp.task('db:sync', function(cb) {
   );
 });
 
-// load and trans the data
+// load and transform the data
 gulp.task('db:load', function() {
   // queries
-  database['podcasts'] = db.get_all(language, 'podcast');
+  database['podcast'] = db.get_all(language, 'podcast')[0];
   database['episodes'] = db.get_all(language, 'episode');
-  // transforms
+
+  // transform - podcast
+  let podcast_publish_date = database['podcast'].publishDate;
+  let podcast_pub_date = new Date(podcast_publish_date).toUTCString();
+  database['podcast']['pubDate'] = podcast_pub_date;
+
+  // transform - episodes
   _.each(database.episodes, (episode) => {
     episode['media'] = `https:${episode.asset.file.url}`;
-  });
-});
-
-gulp.task('test', ['db:load'], function() {
-  console.log(database.podcasts);
-  _.each(database.episodes, (episode) => {
-    console.log(episode.media);
+    let episode_publish_date = episode.publishDate;
+    let episode_pub_date = new Date(episode_publish_date).toUTCString();
+    episode['pubDate'] = episode_pub_date;
   });
 });
 
@@ -86,6 +88,7 @@ gulp.task('clean:js', function() {
 gulp.task('build:js', ['clean:js'], function() {
   return gulp.src('./src/js/*')
     .pipe(jsminify({ ext: { src:'-debug.js', min:'.js' }, ignoreFiles: ['*min.js'] } ))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('./public/js/'))
     .pipe(browser.reload( { stream: true} ));
 });
@@ -103,7 +106,7 @@ gulp.task('clean:views', function() {
 
 gulp.task('build:views', ['clean:views'], function() {
   var data = {
-    podcast: database.podcasts[0],
+    podcast: database.podcast,
     episodes: database.episodes
   };
   // landing page
