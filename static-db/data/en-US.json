@@ -104,8 +104,8 @@
         "id": "3tuiYihpLamMGgGKC4O8qU",
         "type": "Entry",
         "createdAt": "2016-10-19T19:47:21.313Z",
-        "updatedAt": "2016-10-28T18:28:22.285Z",
-        "revision": 2,
+        "updatedAt": "2016-10-30T22:23:23.804Z",
+        "revision": 4,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -116,19 +116,16 @@
       },
       "fields": {
         "title": {
-          "en-US": "Episode-3"
+          "en-US": "Quiz Show"
         },
         "slug": {
-          "en-US": "episode-3"
+          "en-US": "quiz-show"
         },
         "subtitle": {
-          "en-US": "number one"
+          "en-US": "episode 3"
         },
         "description": {
           "en-US": "Letterpress enamel pin wolf, flannel sriracha portland pork belly forage jianbing tumblr. Williamsburg man braid viral, raw denim DIY kale chips waistcoat vaporware gluten-free 3 wolf moon everyday carry occupy tattooed shoreditch. "
-        },
-        "publishDate": {
-          "en-US": "2016-10-01T00:00-06:00"
         },
         "podcast": {
           "en-US": {
@@ -156,6 +153,9 @@
               "id": "4lLV5CPss028GGIUO0yMA0"
             }
           }
+        },
+        "number": {
+          "en-US": 3
         }
       }
     },
@@ -171,8 +171,8 @@
         "id": "22NCeFvtJyA0OQWmEgYwCc",
         "type": "Entry",
         "createdAt": "2016-10-19T19:47:10.016Z",
-        "updatedAt": "2016-10-28T18:28:12.386Z",
-        "revision": 2,
+        "updatedAt": "2016-10-30T22:23:51.298Z",
+        "revision": 4,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -183,19 +183,16 @@
       },
       "fields": {
         "title": {
-          "en-US": "Episode-2"
+          "en-US": "Network"
         },
         "slug": {
-          "en-US": "episode-2"
+          "en-US": "network"
         },
         "subtitle": {
-          "en-US": "number one"
+          "en-US": "episode2"
         },
         "description": {
           "en-US": "Seitan lomo single-origin coffee, literally kogi microdosing occupy post-ironic listicle retro crucifix messenger bag chambray glossier subway tile. Helvetica vaporware vape humblebrag before they sold out."
-        },
-        "publishDate": {
-          "en-US": "2016-10-01T00:00-06:00"
         },
         "podcast": {
           "en-US": {
@@ -223,6 +220,9 @@
               "id": "4lLV5CPss028GGIUO0yMA0"
             }
           }
+        },
+        "number": {
+          "en-US": 2
         }
       }
     },
@@ -238,8 +238,8 @@
         "id": "5jcnJXfWucoO2CEYMcyy6Y",
         "type": "Entry",
         "createdAt": "2016-10-19T19:46:18.470Z",
-        "updatedAt": "2016-10-28T18:28:04.156Z",
-        "revision": 2,
+        "updatedAt": "2016-10-30T22:22:58.089Z",
+        "revision": 5,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -250,19 +250,16 @@
       },
       "fields": {
         "title": {
-          "en-US": "Episode-1"
+          "en-US": "They Live"
         },
         "slug": {
-          "en-US": "episode-1"
+          "en-US": "they-live"
         },
         "subtitle": {
-          "en-US": "number one"
+          "en-US": "episode 1"
         },
         "description": {
           "en-US": "Mustache aesthetic snackwave trust fund messenger bag listicle yr, brunch blog. Health goth williamsburg flannel, plaid brunch chambray kale chips. Pour-over VHS organic actually normcore. "
-        },
-        "publishDate": {
-          "en-US": "2016-10-01T00:00-06:00"
         },
         "podcast": {
           "en-US": {
@@ -290,6 +287,9 @@
               "id": "4lLV5CPss028GGIUO0yMA0"
             }
           }
+        },
+        "number": {
+          "en-US": 1
         }
       }
     },
@@ -363,5 +363,5 @@
       }
     }
   ],
-  "nextSyncToken": "w5ZGw6JFwqZmVcKsE8Kow4grw45QdyZpTgHCsG8fVRQvwqF0wq_DkHXDolfCrcOUw7xLU8O9HcOXQx52worDlsK3wonCusK0woTCtQ8bw4Y1YsKfDTgXw4VfaEjDh8Obwo5aw7vDrMKfw6vDqMOWB1TDj2TCnHU"
+  "nextSyncToken": "w5ZGw6JFwqZmVcKsE8Kow4grw45QdyYiw5Y5w6_DmcORG8OLwph2GMKueQPDhcK7wo3DlMOaw4EewrrDqMKrw7DCi8Onw4LDlDZUXsOuw6ZfwprClBbCqcOIDn15bMKBGEUhw5nCuQtaw5p3HMKHwrrCh8OGcMO-UHsd"
 }

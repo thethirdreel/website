@@ -10,6 +10,7 @@ const rename = require('gulp-rename');
 const concat = require('gulp-concat');
 const nodemon = require('gulp-nodemon');
 const browser = require('browser-sync').create();
+const sequence = require('run-sequence');
 // js
 const jsminify = require('gulp-minify');
 // css
@@ -151,7 +152,8 @@ gulp.task('build:css', ['clean:css'], function() {
 // generate the website
 //
 
-gulp.task('generate', ['build:js', 'build:views', 'build:css', 'db:sync', 'db:load'], function() {
+gulp.task('generate', function(cb) {
+  sequence('db:sync', 'db:load', 'build:js', 'build:views', 'build:css', cb);
 });
 
 //
