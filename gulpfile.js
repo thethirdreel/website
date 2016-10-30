@@ -164,13 +164,16 @@ gulp.task('reload', function() {
       baseDir: './public'
     },
   })
-})
+});
 
 gulp.task('dev', ['reload', 'generate'], function(){
   gulp.watch('./src/js/*', ['build:js']);
   gulp.watch('./src/css/*', ['build:css']);
   gulp.watch('./src/templates/**/*', ['build:views']);
 })
+
+gulp.task('dev:build:views', ['db:load', 'build:views'], function() {
+});
 
 //
 // production build
