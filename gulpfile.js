@@ -2,38 +2,42 @@
 
 const path = require('path');
 const fs = require('fs');
+const del = require('del');
+// gulp helpers
 const gulp = require('gulp');
 const gutil = require('gulp-util');
 const rename = require('gulp-rename');
+const concat = require('gulp-concat');
+const nodemon = require('gulp-nodemon');
+const browser = require('browser-sync').create();
+// js
+const jsminify = require('gulp-minify');
+// css
+const autoprefixer = require('gulp-autoprefixer');
+const cssminify = require('gulp-clean-css');
+// handlebars
 const hb = require('gulp-hb');
 const layouts = require('handlebars-layouts');
 const helpers = require('handlebars-helpers');
-const concat = require('gulp-concat');
-const nodemon = require('gulp-nodemon');
+// data
 const argv = require('yargs').alias('l', 'language').alias('x', 'exclude').argv;
 const _ = require('lodash');
-const del = require('del');
 const db = require('./static-db');
 
 //
 // set up & config
 //
 
+const language = 'en-US';
 const env = process.env.NODE_ENV || 'development';
+var database = {};
 
 //
-// tasks
+// data
 //
-
-gulp.task('clean', function () {
-  // return del([
-  //   './public/**/*.html',
-  //   './public/**/*.rss'
-  // ]);
-});
 
 // get most recent data
-gulp.task('db:sync', function (cb) {
+gulp.task('db:sync', function(cb) {
   // --exclude was passed
   if (argv['exclude']) {
     gutil.log(gutil.colors.magenta('excluding db sync'));
@@ -51,121 +55,127 @@ gulp.task('db:sync', function (cb) {
   );
 });
 
-function msToHMS(duration) {
-  var seconds = duration / 1000;
-  var hours = parseInt( seconds / 3600 ); // 3,600 seconds in 1 hour
-  seconds = seconds % 3600; // seconds remaining after extracting hours
-  var minutes = parseInt( seconds / 60 ); // 60 seconds in 1 minute
-  seconds = seconds % 60;
-  seconds = Math.round(seconds);
-  if (hours < 10) { hours = '0' + hours};
-  if (minutes < 10) { minutes = '0' + minutes};
-  if (seconds < 10) { seconds = '0' + seconds};
-  return hours+':'+minutes+':'+seconds;
-}
+// load and trans the data
+gulp.task('db:load', function() {
+  // queries
+  database['podcasts'] = db.get_all(language, 'podcast');
+  database['episodes'] = db.get_all(language, 'episode');
+  // transforms
+  _.each(database.episodes, (episode) => {
+    episode['media'] = `https:${episode.asset.file.url}`;
+  });
+});
 
-gulp.task('render', ['clean', 'db:sync'], function () {
-  _.each(db.languages(), (language) => {
-    // --language was passed. skip this language?
-    if (argv['language'] && language !== argv['language']) {
-      gutil.log(gutil.colors.magenta('skipping [' + language + ']'));
-    } else {
-      // let localized_db = db.load(language);
-      // console.log('\t', `[ ${language} ]`, localized_db.items.length, 'items');
-
-      let podcasts = db.get_all(language, 'podcast');
-      // podcasts[0]['image'] = `https:${podcasts[0].image.file.url}`;
-      // console.log(podcasts[0].image.file.url);
-      // console.log(podcasts);
-
-      let episodes = db.get_all(language, 'episode');
-      // console.log(audios);
-      _.each(episodes, (episode) => {
-        // console.log(audio.asset.file.url);
-        episode['media'] = `https:${episode.asset.file.url}`;
-      });
-
-      //console.log('\t', `[ ${language} ]`, podcasts.items.length, 'items');
-
-      // _(['reports','sandbox']).each((item) => {
-      //   require(`./src/lib/${item}.js`)(language, db);
-      // });
-
-      // render index.html
-      var data = {
-        podcast: podcasts[0],
-        episodes: episodes
-      };
-
-      gulp
-        .src('./src/templates/index.hbs')
-        .pipe(hb()
-          .data(data)
-        )
-        .pipe(rename('index.html'))
-        .pipe(gulp.dest('./public/'));
-
-      gulp
-        .src('./src/templates/feed.hbs')
-        .pipe(hb()
-          .data(data)
-        )
-        .pipe(rename('feed.rss'))
-        .pipe(gulp.dest('./public/'));
-
-    }
+gulp.task('test', ['db:load'], function() {
+  console.log(database.podcasts);
+  _.each(database.episodes, (episode) => {
+    console.log(episode.media);
   });
 });
 
 //
-// dev only tasks
+// js
 //
 
-gulp.task('watch', function () {
-  gulp.watch([
-    './src/lib/**/*.js',
-    './src/middleware/**/*.js',
-    './src/setup/**/*.js',
-    './src/routes/**/*.js',
-    './src/templates/**/*.hbs',
-    './src/server.js'
-  ], [
-    // 'jshint'
-  ])
-    .on('change', function (event) {
-      console.log(event.path + ' was ' + event.type);
-    });
+gulp.task('clean:js', function() {
+  return del([
+    './public/js/**'
+  ]);
 });
 
-gulp.task('dev', [/*'jshint',*/ 'render', 'watch'], function () {
-   nodemon({
-    script: './src/server.js',
-    ext: 'js, hbs',
-    cwd: '.',
-    ignore: [
-      'node_modules/**'
-    ],
-    env: {
-      'NODE_ENV': 'development'
+gulp.task('build:js', ['clean:js'], function() {
+  return gulp.src('./src/js/*')
+    .pipe(jsminify({ ext: { src:'-debug.js', min:'.js' }, ignoreFiles: ['*min.js'] } ))
+    .pipe(gulp.dest('./public/js/'))
+    .pipe(browser.reload( { stream: true} ));
+});
+
+//
+// html & rss
+//
+
+gulp.task('clean:views', function() {
+  return del([
+    './public/**/index.html',
+    './public/**/*.rss'
+  ]);
+});
+
+gulp.task('build:views', ['clean:views'], function() {
+  var data = {
+    podcast: database.podcasts[0],
+    episodes: database.episodes
+  };
+  // landing page
+  gulp
+    .src('./src/templates/index.hbs')
+    .pipe(hb()
+      .data(data)
+    )
+    .pipe(rename('index.html'))
+    .pipe(gulp.dest('./public/'))
+    .pipe(browser.reload( { stream: true} ));
+  // rss feed
+  gulp
+    .src('./src/templates/feed.hbs')
+    .pipe(hb()
+      .data(data)
+    )
+    .pipe(rename('feed.rss'))
+    .pipe(gulp.dest('./public/'))
+    .pipe(browser.reload( { stream: true} ));
+});
+
+//
+// css
+//
+
+gulp.task('clean:css', function() {
+  return del([
+    './public/css/**'
+  ]);
+});
+
+gulp.task('build:css', ['clean:css'], function() {
+  gulp.src('./src/css/*.min.css')
+    .pipe(gulp.dest('./public/css/'))
+    .pipe(browser.reload( { stream: true} ));
+  return gulp.src('./src/css/main.css')
+    .pipe(autoprefixer())
+    .pipe(cssminify())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('./public/css/'))
+    .pipe(browser.reload( { stream: true} ));
+});
+
+//
+// generate the website
+//
+
+gulp.task('generate', ['build:js', 'build:views', 'build:css', 'db:sync', 'db:load'], function() {
+});
+
+//
+// dev build
+//
+
+gulp.task('reload', function() {
+  browser.init({
+    server: {
+      baseDir: './public'
     },
-    watch: [
-      '/src/data/**/*',
-      '/src/templates/**/*',
-      '/src/js/**/*',
-      '/src/data/**/*',
-      '/src/lib/**/*',
-      '/src/middleware/**/*',
-      '/src/routes/**/*',
-      '/src/setup/**/*',
-      '/src/server.js'
-    ]
   })
-    // .on('change', [
-    //   // 'jshint',
-    //   'render'
-    // ]);
-});
+})
 
-gulp.task('build', ['render'], function () {
+gulp.task('dev', ['reload', 'generate'], function(){
+  gulp.watch('./src/js/*', ['build:js']);
+  gulp.watch('./src/css/*', ['build:css']);
+  gulp.watch('./src/templates/**/*', ['build:views']);
+})
 
+//
+// production build
+//
+
+gulp.task('build', ['generate'], function() {
 });
